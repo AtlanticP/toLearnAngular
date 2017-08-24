@@ -78,18 +78,7 @@ AngularJS expressions support filters, while JavaScript expressions do not. -->
 	});
 </script> -->
 
-<div ng-app="myApp" w3-test-directive></div>
 
-<script type="text/javascript">
-	var app = angular.module("myApp", []);
-
-	app.directive("w3TestDirective", function() {
-		return {
-			template : "I was made in a directive constructor!"
-		};
-	});
-</script>
-<br>
 <div ng-app="myApp" w3-test-directive></div>
 
 <script> 
