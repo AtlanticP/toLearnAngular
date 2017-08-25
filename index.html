@@ -78,8 +78,7 @@ AngularJS expressions support filters, while JavaScript expressions do not. -->
 	});
 </script> -->
 
-<<<<<<< HEAD
-=======
+
 <!-- <div ng-app="myApp" w3-test-directive></div>
 
 <script type="text/javascript">
@@ -167,7 +166,10 @@ app.controller("myCtrl", function($scope) {
 }); -->
 
 <!-- The ng-model Directive -->
-<div ng-app="myApp" ng-controller="myCtrl">
+<!-- The ng-model Directive
+With the ng-model directive you can bind the value of an input field to a variable created in AngularJS. -->
+
+<!-- <div ng-app="myApp" ng-controller="myCtrl">
 	Name: <input ng-model="name">
 	You entered: {{ name }}
 </div>
@@ -176,9 +178,53 @@ app.controller("myCtrl", function($scope) {
 	app.controller('myCtrl', function ($scope) {
 		$scope.name = "John Doe";
 	});
+</script> -->
+
+<!-- Form validation
+<form ng-app="" name="myForm">
+	Email:
+	<input type="email" name="myAddress" ng-model="text">
+	<span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+</form>
+the message will be only if ng-show returns true
+ -->
+
+
+<!-- Two-Way Binding -->
+<!-- The binding goes both ways. If the user changes the value inside the input field, the AngularJS property will also change its value: -->
+
+<!-- <div ng-app="myApp" ng-controller="myCtrl">
+Name: <input ng-model="name">
+<h1>You entered: {{name}}</h1>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.name = "John Doe";
+});
 </script>
 
+<p>Change the name inside the input field, and you will see the name in the header changes accordingly.</p>
 
+</body>
+</html>
+ -->
+<!--  Application Status
+The ng-model directive can provide status for application data (invalid, dirty, touched, error):
+ -->
+
+ <form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+
+	Email:	
+	<input type="email" name="myAddress" ng-model="myText" required>
+	<p>Edit the e-mail address, and try to change the status.</p>
+	<h1>Status</h1>
+	<p>Valid: {{myForm.myAddress.$valid}} (if true, the value meets all criteria).</p>
+	<p>Dirty: {{myForm.myAddress.$dirty}} (if true, the value has been changed).</p>
+	<p>Touched: {{myForm.myAddress.$touched}} (if true, the field has been in focus).</p>
+
+</form>
 
 </body>
 </html>
