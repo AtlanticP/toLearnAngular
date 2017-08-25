@@ -214,7 +214,7 @@ app.controller('myCtrl', function($scope) {
 The ng-model directive can provide status for application data (invalid, dirty, touched, error):
  -->
 
- <form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+<!--  <form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
 
 	Email:	
 	<input type="email" name="myAddress" ng-model="myText" required>
@@ -224,7 +224,22 @@ The ng-model directive can provide status for application data (invalid, dirty, 
 	<p>Dirty: {{myForm.myAddress.$dirty}} (if true, the value has been changed).</p>
 	<p>Touched: {{myForm.myAddress.$touched}} (if true, the field has been in focus).</p>
 
-</form>
+</form> -->
+<!-- AngularJS Data Binding
+Data Model, HTML View, The ng-model Directive, Two-way Binding, AngularJS Controller -->
+
+<!-- <div ng-app='myApp' ng-controller="myCtrl">
+	<h1 ng-click="changeName()">{{ firstname }}</h1>
+</div>
+<script>
+	var app = angular.module('myApp', []);
+	app.controller("myCtrl", function($scope) {
+		$scope.firstname = 'John';
+		$scope.changeName = function(){
+			$scope.firstname = 'Alex';
+		}
+	});
+</script> -->	
 
 </body>
 </html>
